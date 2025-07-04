@@ -570,23 +570,23 @@ main()
             getch();
             gameRunning = false;
         }
-        if (GetAsyncKeyState(VK_LEFT))
+        if (GetAsyncKeyState('A') & 0x8000)
         {
             movePacmanLeft();
         }
-        if (GetAsyncKeyState(VK_RIGHT))
+        if (GetAsyncKeyState('D') & 0x8000)
         {
             movePacmanRight();
         }
-        if (GetAsyncKeyState(VK_UP))
+        if (GetAsyncKeyState('W') & 0x8000)
         {
             movePacmanUP();
         }
-        if (GetAsyncKeyState(VK_DOWN))
+        if (GetAsyncKeyState('S') & 0x8000)
         {
             movePacmanDown();
         }
-        if (GetAsyncKeyState(VK_ESCAPE))
+        if (GetAsyncKeyState(VK_ESCAPE) & 0x8000)
         {
             system("CLS");
             cout << "\t EXITING...!";
